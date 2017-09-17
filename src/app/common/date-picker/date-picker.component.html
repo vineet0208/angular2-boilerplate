@@ -1,0 +1,18 @@
+<div [formGroup]="form" class="input-group" 
+    #datePicker="bs-dropdown" dropdown [autoClose]="false" >
+    <input type="text" id="datePicker" class="form-control"
+        value="{{form.get('date').value | date:'MM/dd/yyyy'}}" 
+        readonly required 
+        placeholder="Enter date" #dateInput>
+    <span class="input-group-btn">
+        <button dropdownToggle type="button" 
+                class="form-control" >
+                <i class="glyphicon glyphicon-calendar"></i>
+        </button>
+    </span>
+    <div *dropdownMenu class="dropdown-menu dropdown-date">
+        <datepicker formControlName="date" [showWeeks]="false" 
+                    (selectionDone)="dateSelected($event)">
+        </datepicker>
+    </div>
+</div>

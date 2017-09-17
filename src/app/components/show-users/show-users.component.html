@@ -1,0 +1,19 @@
+<h4>Users</h4>            
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>SSN</th>
+        <th>Date of Birth</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users">
+        <td>{{user.name}}</td>
+        <td>{{user.ssn}}</td>
+        <td>{{user.dateOfBirth}}</td>
+      </tr>
+      <tr>
+    </tbody>
+  </table>
+  <loader *ngIf="showLoader"></loader>
