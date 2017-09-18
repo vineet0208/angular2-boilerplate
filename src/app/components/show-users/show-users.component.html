@@ -16,4 +16,10 @@
       <tr>
     </tbody>
   </table>
+  <div class="form-group"> 
+    <small *ngIf="failMessage" 
+            class="text-danger">
+          Show Users operation failed
+    </small>
+  </div>
   <loader *ngIf="showLoader"></loader>

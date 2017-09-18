@@ -1,5 +1,6 @@
-import {Component, Input, Output, 
-        EventEmitter, ViewChild, ViewEncapsulation} from '@angular/core';
+import {Component, Input, Output,
+        EventEmitter, ViewChild, 
+        ViewEncapsulation } from '@angular/core';
 import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
 
 @Component({

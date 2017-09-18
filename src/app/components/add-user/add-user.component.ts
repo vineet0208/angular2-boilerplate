@@ -40,6 +40,8 @@ export class AddUserComponent  implements OnInit {
         let payload = this.addNameForm.value;
         this.showLoader = true;
         this.addUserService.postUser(payload).subscribe(res=>{
+            this.addNameForm.patchValue({name:'', ssn:'', date:void 0});
+            this.addNameForm.markAsPristine();
             this.successMessage=true;
             this.showLoader = false;
         }, error=>{
